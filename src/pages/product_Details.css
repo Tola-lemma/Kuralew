@@ -356,4 +356,71 @@
     margin-left: 20px;
     margin-right: 20px;
   }
-  
+  /* Responsive Styles */
+@media (max-width: 1024px) {
+    .product-main {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .product-left-column,
+    .product-right-column {
+        flex: none;
+        width: 100%; /* Make columns take full width */
+    }
+
+    .review-section {
+        flex-direction: column; /* Stack reviews vertically */
+    }
+
+    .review-left,
+    .review-right {
+        flex: none;
+        width: 100%; /* Make reviews take full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-title1 {
+        font-size: 1.5rem; /* Reduce title size */
+    }
+
+    .product-price {
+        font-size: 28px; /* Reduce price size */
+    }
+
+    .card-row {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust card size */
+    }
+
+    .tabs {
+        flex-wrap: wrap; /* Allow tabs to wrap */
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-page {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .product-title1 {
+        font-size: 1.25rem; /* Further reduce title size */
+    }
+
+    .product-price {
+        font-size: 24px; /* Further reduce price size */
+    }
+
+    .card-row {
+        grid-template-columns: 1fr; /* Single column for cards */
+    }
+
+    .button-section {
+        gap: 10px; /* Reduce button spacing */
+    }
+
+    .add-to-cart,
+    .checkout {
+        padding: 10px; /* Adjust button padding */
+    }
+}
